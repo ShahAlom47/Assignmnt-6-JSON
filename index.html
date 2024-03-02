@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Document</title>
+</head>
+
+<body class="max-width m-auto border-cm">
+    <header class="section-width ">
+        <nav class="my-4">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box  space-y-3">
+                            <button class="btn btn-circle" title="Home"><img src="image/home.svg" alt="">
+                            </button>
+                            <button class="btn btn-circle" title="Edit"><img src="image/pen.svg" alt=""> </button>
+                            <button class="btn btn-circle" title="Add"><img src="image/Frame (1).svg" alt=""> </button>
+                            <button class="btn btn-circle" title="Replies"><img src="image/Frame (2).svg" alt="">
+                            </button>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl"><img src="image/logo.png" alt=""></a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-center hidden gap-2 lg:flex ">
+                        <button class="btn btn-circle" title="Home"><img src="image/home.svg" alt=""> </button>
+                        <button class="btn btn-circle" title="Edit"><img src="image/pen.svg" alt=""> </button>
+                        <button class="btn btn-circle" title="Add"><img src="image/Frame (1).svg" alt=""> </button>
+                        <button class="btn btn-circle" title="Replies"><img src="image/Frame (2).svg" alt=""> </button>
+
+                    </div>
+                    <button class="bg-[#797DFC] py-2 px-4 rounded-full text-xl font-semibold text-white lg:ml-5">Sign
+                        In</button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="banner" class=" flex flex-col lg:flex-row my-16">
+            <div id="banner-right" class="flex-1">
+                <h1 class="text-white font-bold text-6xl mb-5 ">Welcome to the <br> <span
+                        class="text-[#797DFC]">ReTro</span> Forum</h1>
+                <p class="text-xl text-gray-200 font-medium mb-9">Share your favorite opinion and win and wp forum
+                    coffee mug!</p>
+                <div id="search-box" class=" bg-white rounded-full p-2 pl-3 w-8/12 flex justify-between">
+                    <input id="search" type="text" name="" placeholder="Search here anything"
+                        class="border-none outline-none">
+                    <button
+                        class="bg-[#797DFC] py-2 px-4 rounded-full text-xl font-semibold text-white lg:ml-5 hover:bg-[#6469fc]">Search</button>
+
+                </div>
+            </div>
+            <div id="banner-left" class="w-4/12 flex flex-col justify-center  ">
+                <div class="bg-white rounded-xl p-4 space-y-4">
+                    <div class="flex justify-between text-xl text-gray-500 font-medium">
+                        <p>Registered Users</p>
+                        <p>01</p>
+                    </div>
+                    <div class="flex justify-between text-xl text-gray-500 font-medium">
+                        <p>Forum</p>
+                        <p>05</p>
+                    </div>
+                    <div class="flex justify-between text-xl text-gray-500 font-medium">
+                        <p>Topics</p>
+                        <p>03</p>
+                    </div>
+                    <div class="flex justify-between text-xl text-gray-500 font-medium">
+                        <p>Replies</p>
+                        <p>06</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <main class="section-width border-cm">
+        <section id="Discuss">
+            <h1 class="sec-heading">Let’s Discuss</h1>
+            <p class="sec-para ">Dive into a world of diverse passions with our curated section, where music, coding,
+                comedy, and more await exploration.</p>
+
+<div id="contant" class="flex gap-3 flex-col lg:flex-row  my-7">
+
+
+            <div id="left-container" class="flex-1">
+
+
+
+
+            </div>
+
+            <div id="right-container" class=" lg:w-4/12 bg-[#12132D0D] rounded-xl p-3">
+                <div id="right-contant">
+                    <div id="header" class="flex justify-between">
+                        <h1 class="font-medium text-lg ">Title</h1>
+                        <div class="flex flex-1 justify-end">
+                            <img src="image/ll2.svg" alt="">
+                            <p class="flex font-medium text-gray-600">Mark as Read <span id="list-counter" class="mx-2"> 0</span> </p>
+
+                        </div>
+                    </div>
+                    <div id="list-container" class="py-4 flex flex-col gap-2">
+                        <div id="list" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
+                            <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
+                            <div class="flex items-center">
+                                <img src="image/tabler-icon-eye (1).svg" alt="">
+                                <p id="list-item-view">123434</p>
+                            </div>
+
+                        </div>
+                        <div id="list2" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
+                            <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
+                            <div class="flex items-center">
+                                <img src="image/tabler-icon-eye (1).svg" alt="">
+                                <p id="list-item-view">123434</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+                
+</div>
+
+        </section>
+
+    </main>
+    <footer>
+
+
+    </footer>
+
+
+    <script src="JS/index.js"></script>
+</body>
+
+</html>

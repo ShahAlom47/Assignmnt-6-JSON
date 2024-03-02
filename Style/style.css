@@ -1,0 +1,53 @@
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+box-sizing: border-box;
+
+}
+
+.max-width{
+max-width: 1200px;
+
+}
+
+.section-width{
+width: 85%;
+margin: auto;
+}
+
+.border-cm{
+
+    border: solid green 3px;
+}
+
+#banner{
+
+    background-color: #12132D;
+    background-image: url(../image/bgbanner.png);
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 32px;
+    padding: 95px;
+}
+button:active{
+    transform: scale(0.95);
+}
+
+.sec-heading{
+color: black;
+font-size: 36px;
+font-weight: 800;
+text-align: center;
+
+}
+
+.sec-para{
+    color:rgb(106, 106, 106);
+font-size: 18px;
+font-weight: 400;
+text-align: center;
+width: 60%;
+margin: 18px  auto;
+
+}
