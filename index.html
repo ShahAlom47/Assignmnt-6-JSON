@@ -53,21 +53,22 @@
             </div>
         </nav>
 
-        <div id="banner" class=" flex flex-col lg:flex-row my-16">
+        <div id="banner" class=" flex gap-3 flex-col lg:flex-row my-16 p-14 lg:p-24">
             <div id="banner-right" class="flex-1">
-                <h1 class="text-white font-bold text-6xl mb-5 ">Welcome to the <br> <span
+                <h1 class="text-white font-bold text-3xl lg:text-6xl mb-5 ">Welcome to the <br> <span
                         class="text-[#797DFC]">ReTro</span> Forum</h1>
-                <p class="text-xl text-gray-200 font-medium mb-9">Share your favorite opinion and win and wp forum
+                <p class="text-lg lg:text-xl text-gray-200 font-medium mb-9">Share your favorite opinion and win and wp
+                    forum
                     coffee mug!</p>
-                <div id="search-box" class=" bg-white rounded-full p-2 pl-3 w-8/12 flex justify-between">
+                <div id="search-box" class=" bg-white rounded-full p-2 pl-3 lg:w-8/12 flex justify-between">
                     <input id="search" type="text" name="" placeholder="Search here anything"
-                        class="border-none outline-none">
+                        class="border-none outline-none w-8/12">
                     <button
-                        class="bg-[#797DFC] py-2 px-4 rounded-full text-xl font-semibold text-white lg:ml-5 hover:bg-[#6469fc]">Search</button>
+                        class="bg-[#797DFC] py-2 px-4 rounded-full text-lg lg:text-xl font-semibold text-white lg:ml-5 hover:bg-[#6469fc]">Search</button>
 
                 </div>
             </div>
-            <div id="banner-left" class="w-4/12 flex flex-col justify-center  ">
+            <div id="banner-left" class="lg:w-4/12 flex flex-col justify-center  ">
                 <div class="bg-white rounded-xl p-4 space-y-4">
                     <div class="flex justify-between text-xl text-gray-500 font-medium">
                         <p>Registered Users</p>
@@ -97,54 +98,299 @@
     <main class="section-width border-cm">
         <section id="Discuss">
             <h1 class="sec-heading">Let’s Discuss</h1>
-            <p class="sec-para ">Dive into a world of diverse passions with our curated section, where music, coding,
+            <p class="sec-para lg:w-8/12">Dive into a world of diverse passions with our curated section, where music,
+                coding,
                 comedy, and more await exploration.</p>
 
-<div id="contant" class="flex gap-3 flex-col lg:flex-row  my-7">
+            <div id="contant" class="flex gap-3 flex-col lg:flex-row  my-7">
+
+                <!-- left container  -->
+                <div id="left-container" class="flex-1 space-y-3">
+                    <!-- card 1  -->
+                    <div class="card p-9 bg-[#797DFC1A] border-2 border-blue-500  flex  gap-4 flex-col lg:flex-row ">
+                        <div class="img-box  relative">
+                            <p id="isActive" class="w-3 h-3 rounded-full bg-red-700 absolute "></p>
+                            <div class="img border-4 rounded-lg w-16 h-16">
+                                <img src="image/home.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="data-box space-y-3">
+                            <div class="header flex gap-3 text-gray-600">
+                                <p class="text-base font-semibold"># <span id="category">Music</span></p>
+                                <p class="text-base font-semibold">Author: <span id="A-Name">Alom</span></p>
+
+                            </div>
+                            <div class="main space-y-3">
+                                <h1 class=" font-bold text-xl">10 Kids Unaware of Their Halloween Costume</h1>
+                                <p class="text-gray-600 ">It’s one thing to subject yourself to ha Halloween costume
+                                    mishap because, hey that’s your prerogative</p>
+
+                            </div>
+                            <hr>
+                            <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
+                                <div class="f-container flex flex-wrap gap-5">
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/msg.svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/tabler-icon-eye (1).svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/clock.svg" alt="">
+                                        <p> <span>54</span> Min</p>
+                                    </div>
+                                </div>
+                                <button id="card-btn" class="rounded-full "><img src="image/btn icon.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
 
 
-            <div id="left-container" class="flex-1">
+                    </div>
+
+                    <!-- card 2  -->
+                    <div
+                        class="card p-9 bg-[#797DFC1A] border-2 border-blue-500  flex  gap-4 flex-row flex-col lg:flex-row ">
+                        <div class="img-box  relative">
+                            <p id="isActive" class="w-3 h-3 rounded-full bg-red-700 absolute "></p>
+                            <div class="img border-4 rounded-lg w-16 h-16">
+                                <img src="image/home.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="data-box space-y-3">
+                            <div class="header flex gap-3 text-gray-600">
+                                <p class="text-base font-semibold"># <span id="category">Music</span></p>
+                                <p class="text-base font-semibold">Author: <span id="A-Name">Alom</span></p>
+
+                            </div>
+                            <div class="main space-y-3">
+                                <h1 class=" font-bold text-xl">10 Kids Unaware of Their Halloween Costume</h1>
+                                <p class="text-gray-600 ">It’s one thing to subject yourself to ha Halloween costume
+                                    mishap because, hey that’s your prerogative</p>
+
+                            </div>
+                            <hr>
+                            <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
+                                <div class="f-container flex flex-wrap gap-5">
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/msg.svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/tabler-icon-eye (1).svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/clock.svg" alt="">
+                                        <p> <span>54</span> Min</p>
+                                    </div>
+                                </div>
+                                <button id="card-btn" class="rounded-full "><img src="image/btn icon.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
 
 
+                    </div>
+
+                    <!-- card 3 -->
+                    <div
+                        class="card p-9 bg-[#797DFC1A] border-2 border-blue-500  flex  gap-4 flex-row flex-col lg:flex-row ">
+                        <div class="img-box  relative">
+                            <p id="isActive" class="w-3 h-3 rounded-full bg-red-700 absolute "></p>
+                            <div class="img border-4 rounded-lg w-16 h-16">
+                                <img src="image/home.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="data-box space-y-3">
+                            <div class="header flex gap-3 text-gray-600">
+                                <p class="text-base font-semibold"># <span id="category">Music</span></p>
+                                <p class="text-base font-semibold">Author: <span id="A-Name">Alom</span></p>
+
+                            </div>
+                            <div class="main space-y-3">
+                                <h1 class=" font-bold text-xl">10 Kids Unaware of Their Halloween Costume</h1>
+                                <p class="text-gray-600 ">It’s one thing to subject yourself to ha Halloween costume
+                                    mishap because, hey that’s your prerogative</p>
+
+                            </div>
+                            <hr>
+                            <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
+                                <div class="f-container flex flex-wrap gap-5">
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/msg.svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/tabler-icon-eye (1).svg" alt="">
+                                        <p>08755</p>
+                                    </div>
+                                    <div class="text-gray-600 text-lg flex gap-2 items-center">
+                                        <img src="image/clock.svg" alt="">
+                                        <p> <span>54</span> Min</p>
+                                    </div>
+                                </div>
+                                <button id="card-btn" class="rounded-full "><img src="image/btn icon.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
 
 
-            </div>
+                    </div>
 
-            <div id="right-container" class=" lg:w-4/12 bg-[#12132D0D] rounded-xl p-3">
-                <div id="right-contant">
-                    <div id="header" class="flex justify-between">
-                        <h1 class="font-medium text-lg ">Title</h1>
-                        <div class="flex flex-1 justify-end">
-                            <img src="image/ll2.svg" alt="">
-                            <p class="flex font-medium text-gray-600">Mark as Read <span id="list-counter" class="mx-2"> 0</span> </p>
+                </div>
+                <!-- left container  end-->
+
+                <!-- right containetr -->
+                <div id="right-container" class=" lg:w-4/12  rounded-xl ">
+                    <div id="right-contant" class="bg-[#12132D0D] rounded-xl p-3">
+                        <div id="header" class="flex justify-between">
+                            <h1 class="font-medium text-lg ">Title</h1>
+                            <div class="flex flex-1 justify-end">
+                                <img src="image/ll2.svg" alt="">
+                                <p class="flex font-medium text-gray-600">Mark as Read <span id="list-counter"
+                                        class="mx-2"> 0</span> </p>
+
+                            </div>
+                        </div>
+                        <div id="list-container" class="py-4 flex flex-col gap-2">
+                            <div id="list" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
+                                <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
+                                <div class="flex items-center">
+                                    <img src="image/tabler-icon-eye (1).svg" alt="">
+                                    <p id="list-item-view">123434</p>
+                                </div>
+
+                            </div>
+                            <div id="list2" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
+                                <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
+                                <div class="flex items-center">
+                                    <img src="image/tabler-icon-eye (1).svg" alt="">
+                                    <p id="list-item-view">123434</p>
+                                </div>
+
+                            </div>
 
                         </div>
                     </div>
-                    <div id="list-container" class="py-4 flex flex-col gap-2">
-                        <div id="list" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
-                            <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
-                            <div class="flex items-center">
-                                <img src="image/tabler-icon-eye (1).svg" alt="">
-                                <p id="list-item-view">123434</p>
-                            </div>
 
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- join forum -->
+        <section class="forum my-14 bg-[#12132D] flex flex-col lg:flex-row rounded-2xl p-5">
+            <div class="flex-1 p-4 lg:p-14">
+                <h1 class=" text-white text-3xl lg:text-4xl font-bold mb-5">Join Our Forum</h1>
+                <p class=" text-gray-300 ">Engage with our vibrant community! Join our forum for discussions, insights,
+                    and shared knowledge.</p>
+                <button class="bg-[#797DFC] py-2 px-4 rounded-full text-lg lg:text-xl font-semibold text-white mt-8">Registered
+                    Now</button>
+
+            </div>
+            <div class="forum-img-box lg:w-4/12 flex items-end">
+                <img src="image/joinforum.png" alt="">
+
+            </div>
+
+        </section>
+
+        <!-- latest post -->
+        <section class="latest post ">
+            <h1 class="sec-heading">Latest Post</h1>
+            <p class="sec-para lg:w-8/12 ">Explore our freshest content! Stay informed and inspired with our latest
+                posts, covering diverse topics for your interests and curiosity.</p>
+            <div class="post-card-container grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- card 1 -->
+                <div class="card  bg-base-100 shadow-xl border-2">
+                    <figure class="px-10 pt-10">
+                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-center">
+                        <div class="card-head flex gap-3">
+                            <img src="image/cal.svg" alt="">
+                            <p>29 January 2024</p>
                         </div>
-                        <div id="list2" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
-                            <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
-                            <div class="flex items-center">
-                                <img src="image/tabler-icon-eye (1).svg" alt="">
-                                <p id="list-item-view">123434</p>
+                        <h2 class="card-title text-start font-bold">What will a mars habitat force that impact in our
+                            daily life!!!</h2>
+                        <p class="text-start text-gray-600 font-medium">Yes, you can run unit tests and view the results
+                            directly within the app. </p>
+                        <div class="post-footer flex items-center gap-3 my-3">
+                            <div class="post-img-box w-16 h-16 rounded-full border-2">
+                                <img class="rounded-full" src="image/joinforum.png" alt="">
                             </div>
+                            <div class="footer-data text-start">
+                                <h4 class="font-bold">Cameron Williamson</h4>
+                                <p class="text-gray-600">Unknown</p>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+
+                <!-- card 1 -->
+                <div class="card  bg-base-100 shadow-xl border-2">
+                    <figure class="px-10 pt-10">
+                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-center">
+                        <div class="card-head flex gap-3">
+                            <img src="image/cal.svg" alt="">
+                            <p>29 January 2024</p>
+                        </div>
+                        <h2 class="card-title text-start font-bold">What will a mars habitat force that impact in our
+                            daily life!!!</h2>
+                        <p class="text-start text-gray-600 font-medium">Yes, you can run unit tests and view the results
+                            directly within the app. </p>
+                        <div class="post-footer flex items-center gap-3 my-3">
+                            <div class="post-img-box w-16 h-16 rounded-full border-2">
+                                <img class="rounded-full" src="image/joinforum.png" alt="">
+                            </div>
+                            <div class="footer-data text-start">
+                                <h4 class="font-bold">Cameron Williamson</h4>
+                                <p class="text-gray-600">Unknown</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 1 -->
+                <div class="card  bg-base-100 shadow-xl border-2">
+                    <figure class="px-10 pt-10">
+                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start text-center">
+                        <div class="card-head flex gap-3">
+                            <img src="image/cal.svg" alt="">
+                            <p>29 January 2024</p>
+                        </div>
+                        <h2 class="card-title text-start font-bold">What will a mars habitat force that impact in our
+                            daily life!!!</h2>
+                        <p class="text-start text-gray-600 font-medium">Yes, you can run unit tests and view the results
+                            directly within the app. </p>
+                        <div class="post-footer flex items-center gap-3 my-3">
+                            <div class="post-img-box w-16 h-16 rounded-full border-2">
+                                <img class="rounded-full" src="image/joinforum.png" alt="">
+                            </div>
+                            <div class="footer-data text-start">
+                                <h4 class="font-bold">Cameron Williamson</h4>
+                                <p class="text-gray-600">Unknown</p>
+                            </div>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-                
-</div>
-
         </section>
 
     </main>

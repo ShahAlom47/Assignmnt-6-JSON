@@ -28,7 +28,7 @@ margin: auto;
     background-position: bottom;
     background-size: cover;
     border-radius: 32px;
-    padding: 95px;
+ ;
 }
 button:active{
     transform: scale(0.95);
@@ -47,7 +47,7 @@ text-align: center;
 font-size: 18px;
 font-weight: 400;
 text-align: center;
-width: 60%;
+
 margin: 18px  auto;
 
 }
