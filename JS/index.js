@@ -23,8 +23,25 @@ let Active = '';
 loadingShowHide(Loaded);
 setTimeout(() => {
     fetch(allPostUrl)
-        .then(res => res.json())
+        .then(res => {
+            if(!res.ok){throw (res.status)}
+           return res.json()
+        })
+
         .then(datas => printCard(datas.posts))
+        .catch(error=>{
+
+            let xx = document.createElement('h1')
+            xx.className = `flex flex-col items-center justify-center p-4`
+            xx.innerHTML = `
+               <h1 class="text-4xl lg:text-4xl text-center font-bold">404</h1>
+               <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
+               <p>${error.message}</p>
+               `
+            leftCardContainer.appendChild(xx);
+            Loaded = true
+            loadingShowHide(Loaded)
+        })
 }, 2000);
 
 
@@ -36,44 +53,30 @@ searchBtn.addEventListener('click', () => {
     let searchValue = searchBox.value
     searchBox.value = '';
 
-    
-
-        const categoryPost = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchValue}`
-        fetch(categoryPost)
-            .then(res =>{
-                if(!res.ok){
-                    throw (res.status)
-
-                }
-                
-               return  res.json()
-            })
-            .then(datas =>{ 
-
-                setTimeout(() => {
-              return  printCard(datas.posts)
-            }, 2000);
-            })
 
 
-            .catch(err=>{
-                leftCardContainer.innerHTML = '';
-                const cardError = document.createElement('div');
-                errorBox.className=`flex flex-col justify-center items-center py-9 col-span-3`
-                errorBox.innerHTML=`
-            
-                <h1 class="text-4xl lg:text-4xl text-center font-bold">404</h1>
-                <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
-                <p>${err.message}</p>
-                `
-                leftCardContainer.appendChild(cardError);
+    const categoryPost = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchValue}`
+    fetch(categoryPost)
+        .then(res => {
+            if (!res.ok) {
+                throw (res.status)
+            }
+            return res.json()
+         })
+        .then(datas => {return printCard(datas.posts)})
 
-            })
-
- 
-
-
-
+        .catch(err => {
+            let xx = document.createElement('h1')
+            xx.className = `flex flex-col items-center justify-center p-4`
+            xx.innerHTML = `
+               <h1 class="text-4xl lg:text-4xl text-center font-bold">404</h1>
+               <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
+               <p>${err.message}</p>
+               `
+            leftCardContainer.appendChild(xx);
+            Loaded = true
+            loadingShowHide(Loaded)
+        })
 
 })
 
@@ -84,9 +87,8 @@ const printCard = (datasArr) => {
         errorMsg.classList.remove('hidden');
         Loaded = true
         loadingShowHide(Loaded);
-
     }
-    else{
+    else {
         errorMsg.classList.add('hidden');
     }
 
@@ -101,30 +103,29 @@ const printCard = (datasArr) => {
         const makeCard = document.createElement('div');
         makeCard.className = `rounded-lg p-9 bg-[#797DFC1A] border-2 border-blue-500  flex  gap-4 flex-col lg:flex-row`
         makeCard.innerHTML = `
-    <div class="img-box  relative">
-    <p id="isActive" class="w-3 h-3 rounded-full ${Active} bg-gre  border-2 absolute "></p>
-    <div class="img border-4 rounded-lg w-16 h-16">
-        <img class='rounded-lg' src=${datas.image} alt="">
-    </div>
-</div>
-<div class="data-box space-y-3 flex-1">
-    <div class="header flex gap-3 text-gray-600">
-        <p class="text-base font-semibold"># <span id="category">${datas.category}</span></p>
-        <p class="text-base font-semibold">Author: <span id="A-Name">${datas.author.name}</span></p>
+        <div class="img-box  relative">
+          <p id="isActive" class="w-3 h-3 rounded-full ${Active} bg-gre  border-2 absolute "></p>
+          <div class="img border-4 rounded-lg w-16 h-16">
+          <img class='rounded-lg' src=${datas.image} alt="">
+          </div>
+        </div>
+        <div class="data-box space-y-3 flex-1">
+            <div class="header flex gap-3 text-gray-600">
+                <p class="text-base font-semibold"># <span id="category">${datas.category}</span></p>
+                <p class="text-base font-semibold">Author: <span id="A-Name">${datas.author?.name}</span></p>
 
-    </div>
-    <div class="main space-y-3">
-        <h1 id='' class=" font-bold text-xl">${datas.title}</h1>
-        <p class="text-gray-600 ">${datas.description}</p>
-
-    </div>
-    <hr>
-    <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
-        <div class="f-container flex flex-wrap gap-5">
-            <div class="text-gray-600 text-lg flex gap-2 items-center">
-                <img src="image/msg.svg" alt="">
-                <p>${datas.comment_count}</p>
             </div>
+            <div class="main space-y-3">
+                <h1 id='' class=" font-bold text-xl">${datas.title}</h1>
+                <p class="text-gray-600 ">${datas.description}</p>
+            </div>
+    <hr>
+        <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
+            <div class="f-container flex flex-wrap gap-5">
+                <div class="text-gray-600 text-lg flex gap-2 items-center">
+                    <img src="image/msg.svg" alt="">
+                    <p>${datas.comment_count}</p>
+                </div>
             <div class="text-gray-600 text-lg flex gap-2 items-center">
                 <img src="image/tabler-icon-eye (1).svg" alt="">
                 <p>${datas.view_count}</p>
@@ -133,26 +134,18 @@ const printCard = (datasArr) => {
                 <img src="image/clock.svg" alt="">
                 <p> <span>${datas.posted_time}</span> Min</p>
             </div>
+         </div>
+         <button onclick='makeTitleList(${JSON.stringify(datas.id)})' class="rounded-full "><img src="image/btn icon.svg" alt=""></button>
+         </div>
         </div>
-        <button onclick='makeTitleList(${JSON.stringify(datas.id)})' class="rounded-full "><img src="image/btn icon.svg"
-                alt=""></button>
-    </div>
-</div>
-    
-    `
 
+    `
         title.push(datas)
 
         Loaded = true
         loadingShowHide(Loaded);
-
         leftCardContainer.appendChild(makeCard);
-
-
     }
-
-
-
 }
 
 function makeTitleList(id) {
@@ -190,41 +183,41 @@ function loadingShowHide(Loaded) {
 
 const latestPostContainer = document.getElementById('latest-card');
 const postLoading = document.getElementById('postLoading')
-const latestPostUrl ='https://openapi.programming-hero.com/api/retro-forum/latest-posts';
+const latestPostUrl = 'https://openapi.programming-hero.com/api/retro-forum/latest-posts';
 
 postLoading.classList.remove('hidden')
 fetch(latestPostUrl)
-.then(res =>{ 
-    if(!res.ok){
-        throw (res.status)
-    }
-   return  res.json()
-})
-.then(datas =>LatestPostCard(datas))
-.catch(error => {
-    latestPostContainer.innerHTML=''
-    const errorBox = document.createElement('div');
-    errorBox.className=`flex flex-col justify-center items-center py-9 col-span-3`
-    errorBox.innerHTML=`
+    .then(res => {
+        if (!res.ok) {
+            throw (res.status)
+        }
+        return res.json()
+    })
+    .then(datas => LatestPostCard(datas))
+    .catch(error => {
+        latestPostContainer.innerHTML = ''
+        const errorBox = document.createElement('div');
+        errorBox.className = `flex flex-col justify-center items-center py-9 col-span-3`
+        errorBox.innerHTML = `
 
     <h1 class="text-4xl lg:text-4xl text-center font-bold">404</h1>
     <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
     <p>${error.message}</p>
     `
-  
-    setTimeout(() => {
-        postLoading.classList.add('hidden')
-    latestPostContainer.appendChild(errorBox);
-    }, 2000);
-    
-  });
 
-const LatestPostCard=(datas)=>{
-for(let data of datas){
+        setTimeout(() => {
+            postLoading.classList.add('hidden')
+            latestPostContainer.appendChild(errorBox);
+        }, 2000);
 
-    const postCard =document.createElement('div');
-    postCard.className=`card  bg-base-100 shadow-xl border-2`
-    postCard.innerHTML=`
+    });
+
+const LatestPostCard = (datas) => {
+    for (let data of datas) {
+
+        const postCard = document.createElement('div');
+        postCard.className = `card  bg-base-100 shadow-xl border-2`
+        postCard.innerHTML = `
     <figure class="px-10 pt-10">
     <img src=${data.cover_image} alt="Shoes"
         class="rounded-xl" />
@@ -248,11 +241,12 @@ for(let data of datas){
 
 </div>
     `
-    setTimeout(() => {
-        postLoading.classList.add('hidden')
-        latestPostContainer.appendChild(postCard);
-    }, 2000);
-   
-   
-}}
+        setTimeout(() => {
+            postLoading.classList.add('hidden')
+            latestPostContainer.appendChild(postCard);
+        }, 2000);
+
+
+    }
+}
 
