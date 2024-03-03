@@ -37,6 +37,7 @@
                         </ul>
                     </div>
                     <a class="btn btn-ghost text-xl"><img src="image/logo.png" alt=""></a>
+                    <!-- RetroConnect -->
                 </div>
 
                 <div class="navbar-end">
@@ -105,12 +106,12 @@
             <div id="contant" class="flex gap-3 flex-col lg:flex-row  my-7">
                <div class="flex-1 flex flex-col justify-center ">
 
-                <div id="loading" class="border-4  m-auto flex items-center py-10 hidden ">
+                <div id="loading" class="  m-auto flex items-center py-10 hidden ">
                     <span class="loading loading-spinner loading-lg w-16"></span>
                    <p class=" font-semibold text-xl"> Loading...</p>
                 </div>
-                <div id="error" class=" flex justify-center items-center">
-                    <img src="image/error.png" alt="">
+                <div id="error" class=" flex justify-center items-center hidden">
+                    <img class=" rounded-xl m-4 " src="image/error.png" alt="">
 
                 </div>
 
@@ -136,16 +137,7 @@
                             </div>
                         </div>
                         <div id="list-container" class="py-4 flex flex-col gap-2">
-                            <!-- <div id="list" class="flex gap-3 justify-between items-start p-3 bg-white rounded-lg">
-                                <h1>sdhasjs hsaddj dshjsdjhd shd</h1>
-                                <div class="flex items-center">
-                                    <img src="image/tabler-icon-eye (1).svg" alt="">
-                                    <p id="list-item-view">123434</p>
-                                </div>
-
-                            </div> -->
-                         
-
+                          <!-- Title list  -->
                         </div>
                     </div>
 
@@ -177,10 +169,16 @@
             <h1 class="sec-heading">Latest Post</h1>
             <p class="sec-para lg:w-8/12 ">Explore our freshest content! Stay informed and inspired with our latest
                 posts, covering diverse topics for your interests and curiosity.</p>
-            <div class="post-card-container grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+                <div id="postLoading" class="  m-auto flex items-center justify-center py-10 hidden ">
+                    <span class="loading loading-spinner loading-lg w-16"></span>
+                   <p class=" font-semibold text-xl"> Loading...</p>
+                </div>
+
+            <div id="latest-card" class="post-card-container grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 <!-- card 1 -->
-                <div class="card  bg-base-100 shadow-xl border-2">
+                <!-- <div class="card  bg-base-100 shadow-xl border-2">
                     <figure class="px-10 pt-10">
                         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
                             class="rounded-xl" />
@@ -205,66 +203,14 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
-                <!-- card 1 -->
-                <div class="card  bg-base-100 shadow-xl border-2">
-                    <figure class="px-10 pt-10">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-start text-center">
-                        <div class="card-head flex gap-3">
-                            <img src="image/cal.svg" alt="">
-                            <p>29 January 2024</p>
-                        </div>
-                        <h2 class="card-title text-start font-bold">What will a mars habitat force that impact in our
-                            daily life!!!</h2>
-                        <p class="text-start text-gray-600 font-medium">Yes, you can run unit tests and view the results
-                            directly within the app. </p>
-                        <div class="post-footer flex items-center gap-3 my-3">
-                            <div class="post-img-box w-16 h-16 rounded-full border-2">
-                                <img class="rounded-full" src="image/joinforum.png" alt="">
-                            </div>
-                            <div class="footer-data text-start">
-                                <h4 class="font-bold">Cameron Williamson</h4>
-                                <p class="text-gray-600">Unknown</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- card 1 -->
-                <div class="card  bg-base-100 shadow-xl border-2">
-                    <figure class="px-10 pt-10">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-start text-center">
-                        <div class="card-head flex gap-3">
-                            <img src="image/cal.svg" alt="">
-                            <p>29 January 2024</p>
-                        </div>
-                        <h2 class="card-title text-start font-bold">What will a mars habitat force that impact in our
-                            daily life!!!</h2>
-                        <p class="text-start text-gray-600 font-medium">Yes, you can run unit tests and view the results
-                            directly within the app. </p>
-                        <div class="post-footer flex items-center gap-3 my-3">
-                            <div class="post-img-box w-16 h-16 rounded-full border-2">
-                                <img class="rounded-full" src="image/joinforum.png" alt="">
-                            </div>
-                            <div class="footer-data text-start">
-                                <h4 class="font-bold">Cameron Williamson</h4>
-                                <p class="text-gray-600">Unknown</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+             
 
             </div>
         </section>
+
+      
 
     </main>
     <footer class="mt-8">
