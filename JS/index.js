@@ -121,7 +121,7 @@ const printCard = (datasArr) => {
             </div>
     <hr>
         <div class="footer flex flex-col lg:flex-row justify-between gap-5  ">
-            <div class="f-container flex flex-wrap gap-5">
+            <div class="f-container flex flex-row flex-wrap gap-5">
                 <div class="text-gray-600 text-lg flex gap-2 items-center">
                     <img src="image/msg.svg" alt="">
                     <p>${datas.comment_count}</p>
@@ -155,7 +155,7 @@ function makeTitleList(id) {
     makeList.className = `flex gap-3 justify-between items-start p-3 bg-white rounded-lg`
     makeList.innerHTML = `
     <h1 class='font-semibold'>${data.title} </h1>
-    <div class="flex items-center">
+    <div class="flex items-center px-3">
         <img src="image/tabler-icon-eye (1).svg" alt="">
         <p id="list-item-view">${data.view_count}</p>
     </div>
