@@ -21,7 +21,7 @@ let Active = '';
 
 
 loadingShowHide(Loaded);
-setTimeout(() => {
+
     fetch(allPostUrl)
         .then(res => {
             if(!res.ok){throw (res.status)}
@@ -37,12 +37,14 @@ setTimeout(() => {
                <h1 class="text-4xl lg:text-4xl text-center font-bold">404</h1>
                <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
                <p>${error.message}</p>
-               `
+             `
+               setTimeout(() => {  
             leftCardContainer.appendChild(xx);
             Loaded = true
             loadingShowHide(Loaded)
+            }, 2000);
         })
-}, 2000);
+
 
 
 searchBtn.addEventListener('click', () => {
@@ -73,9 +75,13 @@ searchBtn.addEventListener('click', () => {
                <h1 class="text-4xl lg:text-4xl text-center font-bold">Data Not Found</h1>
                <p>${err.message}</p>
                `
+
+               setTimeout(() => {
+                
             leftCardContainer.appendChild(xx);
             Loaded = true
             loadingShowHide(Loaded)
+        }, 2000);
         })
 
 })
@@ -141,10 +147,14 @@ const printCard = (datasArr) => {
 
     `
         title.push(datas)
+   
+setTimeout(() => {
+    
 
         Loaded = true
         loadingShowHide(Loaded);
         leftCardContainer.appendChild(makeCard);
+    }, 2000);
     }
 }
 
